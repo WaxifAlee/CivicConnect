@@ -41,7 +41,8 @@ class _LoginScreenState extends State<LoginScreen> {
           leading: CustomBackButton(backTo: "/home")),
       backgroundColor: AppTheme.themeWhite,
       body: Padding(
-        padding: EdgeInsets.all(AppTheme.borderPadding),
+        padding: EdgeInsets.only(
+            left: AppTheme.borderPadding, right: AppTheme.borderPadding),
         child: Center(
           child: SingleChildScrollView(
             child: Column(
@@ -56,7 +57,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       color: AppTheme.themeGray),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(top: 26, bottom: 26),
+                  padding: EdgeInsets.only(top: 12, bottom: 12),
                   child: Image(
                     image: AssetImage('assets/images/login.png'),
                     height: screenHeight * 0.3,
@@ -69,7 +70,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     formKey: _formKey,
                     onSubmit: _handleLogin),
 
-                SizedBox(height: 34),
+                SizedBox(height: 24),
 
                 // Divider
                 const Row(
@@ -100,7 +101,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ],
                 ),
-                SizedBox(height: 34),
+                SizedBox(height: 24),
                 SizedBox(
                   width: double.infinity,
                   height: 42,
@@ -141,14 +142,16 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
 
-                SizedBox(height: 34),
+                SizedBox(height: 16),
 
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const Text("New to CivicConnect?"),
                     TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, "/signUp");
+                        },
                         child: Text(
                           "Register",
                           style: TextStyle(

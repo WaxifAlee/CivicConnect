@@ -1,3 +1,4 @@
+import 'package:civic_connect/screens/signup_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:civic_connect/screens/login_screen.dart';
@@ -14,14 +15,15 @@ class CivicConnectApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'CivicConnect',
-      initialRoute: '/login',
+      initialRoute: '/signUp',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         primaryColor: const Color(0XFF6C63FF),
       ),
       routes: {
         '/login': (context) => LoginScreen(),
-        '/home': (context) => WelcomeScreen()
+        '/home': (context) => WelcomeScreen(),
+        '/signUp': (context) => SignupScreen(),
       },
     );
   }
@@ -182,7 +184,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                       },
                       style: ElevatedButton.styleFrom(
                         padding:
-                            EdgeInsets.symmetric(vertical: screenHeight * 0.03),
+                            EdgeInsets.symmetric(vertical: screenHeight * 0.02),
                         backgroundColor: const Color(0xFF6C63FF),
                         textStyle: const TextStyle(
                             fontSize: 18, fontWeight: FontWeight.w600),

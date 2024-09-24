@@ -39,7 +39,7 @@ class _LoginFormState extends State<LoginForm> {
                     child: TextFormField(
                   controller: widget.emailController,
                   decoration: InputDecoration(
-                      labelText: '   Email ID',
+                      labelText: ' Email ID',
                       labelStyle: TextStyle(
                         color: AppTheme.themePlaceHolderText,
                         fontSize: 14,
@@ -71,7 +71,7 @@ class _LoginFormState extends State<LoginForm> {
                       controller: widget.passwordController,
                       obscureText: !isPasswordVisible,
                       decoration: InputDecoration(
-                          labelText: "   Password",
+                          labelText: " Password",
                           labelStyle: TextStyle(
                             color: AppTheme.themePlaceHolderText,
                             fontSize: 14,

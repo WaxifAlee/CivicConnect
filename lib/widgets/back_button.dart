@@ -9,7 +9,8 @@ class CustomBackButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return IconButton(
       style: const ButtonStyle(iconSize: WidgetStatePropertyAll(24)),
-      icon: const Icon(Icons.arrow_back, color: AppTheme.themeGray),
+      icon: const Icon(Icons.arrow_back,
+          color: AppTheme.themeGray, size: 32, weight: 600),
       onPressed: () {
         Navigator.pushNamed(context, backTo);
       },
